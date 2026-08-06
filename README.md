@@ -12,7 +12,6 @@ in Rust/Axum and React, not a commercial product.
 - `matching/` — Flask (Python). Polls `listing/`'s API for trade matches.
 - `frontend/` — React + TypeScript + Vite.
 - `qa/` — Playwright end-to-end tests.
-- `legacy_listing/` — dead Kotlin/Ktor version of `listing/`, superseded, kept for reference only.
 
 `gateway/`, `listing/`, and `frontend/` are the primary dev's own work.
 `matching/` and `qa/` are each owned by a separate collaborator.
