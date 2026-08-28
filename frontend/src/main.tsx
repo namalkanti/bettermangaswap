@@ -8,10 +8,15 @@ import { router } from './router'
 import type { AuthState } from './router'
 import '@mantine/core/styles.css'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 const authState: AuthState = {
     isAuthenticated: false,
-};
+}
+
+if (import.meta.env.DEV) {
+    const { worker } = await import('./mocks/browser')
+    await worker.start({ onUnhandledRequest: 'bypass' })
+}
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
