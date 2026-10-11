@@ -5,6 +5,7 @@ use tower_http::trace::TraceLayer;
 use crate::state::AppState;
 
 pub mod error;
+pub mod logging;
 pub mod routes;
 pub mod state;
 
